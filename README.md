@@ -11,6 +11,14 @@ This code is an implementation of the Traveling Salesman Problem using a genetic
 - `GeneticAlgorithm.py`: Contains the `GeneticAlgorithm` class which implements the genetic algorithm, and methods to evolve a population, select parents through tournament selection, create a child through crossover, and mutate a path.
 - `main.py`: Contains the main function to run the genetic algorithm and print the best path.
 
+# Implementation Details
+
+The genetic algorithm uses a population of paths, where each path represents a possible solution to the TSP. The algorithm evolves the population over a number of generations, selecting the fittest individuals (i.e., those with the shortest distances) to generate offspring through crossover and mutation. The process continues until a termination criterion is met (e.g., a maximum number of generations or a satisfactory fitness level).
+
+In this implementation, the algorithm uses tournament selection to choose parents for crossover, and swap mutation to introduce variation in the population. Elitism is also implemented, where the best individual in the current population is preserved in the next generation. The algorithm starts with a random population of paths and repeats the evolutionary process until convergence.
+
+The algorithm is implemented using object-oriented programming concepts, with separate classes for the city, path, path handler, population, and genetic algorithm. This makes the code modular and easier to maintain and extend.
+
 # Usage
 
 1. Clone the repository and navigate to the directory.
