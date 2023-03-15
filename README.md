@@ -1,30 +1,35 @@
-# Travelling-Salesman-problem-using-Genetic-Algorithm
+# Traveling Salesman Problem with Genetic Algorithm
 
+This code is an implementation of the Traveling Salesman Problem using a genetic algorithm. The goal of the problem is to find the shortest path that visits all cities exactly once and returns to the starting city. The genetic algorithm involves creating a population of paths, selecting the fittest individuals, and creating new generations through crossover and mutation.
 
-# Genetic Algorithm for TSP
+# Code structure
 
-This is an implementation of the Genetic Algorithm for the Traveling Salesman Problem (TSP) in Python. The TSP is a well-known problem in the field of computer science and operations research, where the goal is to find the shortest possible path that visits all cities in a given list exactly once and returns to the starting city.
+- `City.py`: Contains the `City` class which represents a single city with its X and Y coordinates, and methods to calculate the distance to another city and print the city's coordinates.
+- `PPath.py`: Contains the `PPath` class which represents a path of cities, and methods to add and get cities, calculate the total distance of the path, and check if a city is already in the path.
+- `PathHandler.py`: Contains the `PathHandler` class which handles the cities and paths, and methods to add cities, create a random path, and get the best path.
+- `Population.py`: Contains the `Population` class which represents a population of paths, and methods to save and get paths, get the fittest path, and calculate the average fitness of the population.
+- `GeneticAlgorithm.py`: Contains the `GeneticAlgorithm` class which implements the genetic algorithm, and methods to evolve a population, select parents through tournament selection, create a child through crossover, and mutate a path.
+- `main.py`: Contains the main function to run the genetic algorithm and print the best path.
+
+# Usage
+
+1. Clone the repository and navigate to the directory.
+2. Run `python main.py` to execute the code.
+3. The program will create a `PathHandler` object with six cities and generate a population of paths.
+4. The program will then evolve the population over multiple generations using the genetic algorithm.
+5. Finally, the program will print the best path found and its distance.
+
 
 # Dependencies
 
-Python 3.x
-NumPy
-Files
+- Python 3
+- math module
+- random module
 
-City.py - class to represent a city with x and y coordinates
-PPath.py - class to represent a path consisting of a sequence of cities
-PathHandler.py - class to handle the list of cities and their pairwise distances
-Population.py - class to represent a population of paths
-GeneticAlgorithm.py - class to handle the genetic algorithm operations
-main.py - main file to run the genetic algorithm and display the results
-Usage
+# Contributing
 
-To run the genetic algorithm with default parameters, simply run the main.py file. You can also modify the parameters in the GeneticAlgorithm constructor in main.py to experiment with different settings. The output will display the best path found by the algorithm, along with its total distance.
+If you find any bugs or have suggestions for improvement, please open an issue or pull request.
 
-# Implementation Details
+# License
 
-The genetic algorithm uses a population of paths, where each path represents a possible solution to the TSP. The algorithm evolves the population over a number of generations, selecting the fittest individuals (i.e., those with the shortest distances) to generate offspring through crossover and mutation. The process continues until a termination criterion is met (e.g., a maximum number of generations or a satisfactory fitness level).
-
-In this implementation, the algorithm uses tournament selection to choose parents for crossover, and swap mutation to introduce variation in the population. Elitism is also implemented, where the best individual in the current population is preserved in the next generation. The algorithm starts with a random population of paths and repeats the evolutionary process until convergence.
-
-The algorithm is implemented using object-oriented programming concepts, with separate classes for the city, path, path handler, population, and genetic algorithm. This makes the code modular and easier to maintain and extend.
+This code is released under the MIT License.
