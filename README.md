@@ -17,7 +17,6 @@ The genetic algorithm uses a population of paths, where each path represents a p
 
 In this implementation, the algorithm uses tournament selection to choose parents for crossover, and swap mutation to introduce variation in the population. Elitism is also implemented, where the best individual in the current population is preserved in the next generation. The algorithm starts with a random population of paths and repeats the evolutionary process until convergence.
 
-The algorithm is implemented using object-oriented programming concepts, with separate classes for the city, path, path handler, population, and genetic algorithm. This makes the code modular and easier to maintain and extend.
 
 # Usage
 
