@@ -40,4 +40,4 @@ If you find any bugs or have suggestions for improvement, please open an issue o
 
 # License
 
-This code is released under the MIT License.
+This code is released under the  GPL-3.0 license.
